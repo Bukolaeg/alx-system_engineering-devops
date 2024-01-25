@@ -1,0 +1,7 @@
+# File: ~/.ssh/config
+# This SSH client configuration uses the private key ~/.ssh/school and refuses password authentication.
+
+Host 7d2ec264a48a.07ddd36c.alx-cod.online
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
+
