@@ -4,10 +4,9 @@ file_line { 'Turn off passwd auth':
   line   => 'PasswordAuthentication no',
   match  => '^#PasswordAuthentication',
 }
-
 file_line { 'Declare identity file':
-  path   => '~/.ssh/config',
-  line   => 'IdentityFile ~/.ssh/school',
-  match  => '^#IdentityFile',
+  ensure => present,
+  path   => "${facts['homedir']}/.ssh/config",
+  line   => 'IdentityFile ~/.ssh/custom_key',
 }
 
